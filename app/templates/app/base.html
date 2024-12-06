@@ -34,20 +34,20 @@
                 Products
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Milk</a></li>
-                <li><a class="dropdown-item" href="#">Curd</a></li>
-                <li><a class="dropdown-item" href="#">Milkshake</a></li>
-                <li><a class="dropdown-item" href="#">Lassi</a></li>
-                <li><a class="dropdown-item" href="#">Ghee</a></li>
-                <li><a class="dropdown-item" href="#">Paneer</a></li>
-                <li><a class="dropdown-item" href="#">Cheese</a></li>
-                <li><a class="dropdown-item" href="#">Ice-Creams</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'ML' %}">Milk</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'CR' %}">Curd</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'MS' %}">Milkshake</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'LS' %}">Lassi</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'GH' %}">Ghee</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'PN' %}">Paneer</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'CZ' %}">Cheese</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'IC' %}">Ice-Creams</a></li>
               </ul>
             </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">About Us</a>
+                <a class="nav-link text-white" href="{% url 'about' %}">About Us</a>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Contact Us</a>
+                <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -61,9 +61,10 @@
                 id="profileDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">Pro 163</a>  
                 <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="{% url 'profile' %}
+                      ">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Order</a></li>
-                    <li><a class="dropdown-item" href="#">Change Password</a></li>
+                    <li><a class="dropdown-item" href="{% url 'passwordchange' %}">Change Password</a></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Log Out</a></li>
                 </ul>    
@@ -75,10 +76,11 @@
                 <a href="#" class="nav-link text-white">Wishlist 4</a>
             </li>
             <li class="nav-item dropdown mx-2">
-                <a href="#" class="nav-link text-white">Login</a>
+                <a href="{% url 'login' %}
+                " class="nav-link text-white">Login</a>
             </li>
             <li class="nav-item dropdown mx-2">
-                <a href="#" class="nav-link text-white">Registration</a>
+                <a href="{% url 'customerregistration' %}" class="nav-link text-white">Registration</a>
             </li>
           </ul>
         </div>
